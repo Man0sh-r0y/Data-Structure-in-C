@@ -110,12 +110,12 @@ char *infixToPostfix(char *infix)
                 postfix[j] = pop();
                 j++;
             }
-            if (!isEmpty())
+            if (!isEmpty()) // to delete '(' if it's left
             {
                 pop();
             }
         }
-        else
+        else if (isOperator(infix[i]))
         {
             while (!isEmpty() && precedence(stackTop()) >= precedence(infix[i]))
             {

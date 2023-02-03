@@ -11,6 +11,9 @@ int isEmpty(struct stack *ptr);
 int isFull(struct stack *ptr);
 void push(struct stack *ptr, int element);
 int pop(struct stack *ptr);
+int peek(struct stack *ptr, int index);
+int stackTop(struct stack *ptr);
+int stackBottom(struct stack *ptr);
 
 int main()
 {
@@ -83,4 +86,34 @@ int pop(struct stack *ptr)
         ptr->Top--;
         return val;
     }
+}
+
+int peek(struct stack *ptr, int index)
+// peek() returs the element at the given position
+{
+    int arrIndex = ptr->Top - index + 1;
+    if (arrIndex < 0)
+    {
+        printf("Given index isn't a valid index\n");
+        return -1;
+    }
+    return ptr->arr[arrIndex];
+}
+
+int stackTop(struct stack *ptr)
+{
+    if (isEmpty(ptr))
+    {
+        return -1;
+    }
+    return ptr->arr[ptr->Top];
+}
+
+int stackBottom(struct stack *ptr)
+{
+    if (isEmpty(ptr))
+    {
+        return -1;
+    }
+    return ptr->arr[0];
 }

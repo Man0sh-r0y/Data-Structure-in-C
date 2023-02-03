@@ -24,14 +24,6 @@ int main()
 
 struct node *push(struct node *Top, int element)
 {
-    if (Top == NULL)
-    {
-        struct node *Top = (struct node *)malloc(sizeof(struct node));
-        Top->data = element;
-        Top->next = NULL;
-        printf("\n%d is pushed\n", Top->data);
-        return Top;
-    }
     // addFirst() function of LinkedList
     struct node *newNode = (struct node *)malloc(sizeof(struct node));
     newNode->data = element;

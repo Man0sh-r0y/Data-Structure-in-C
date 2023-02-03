@@ -7,6 +7,9 @@ int isEmpty(int *ptr);
 int isFull(int *ptr, int size);
 void push(int *ptr, int size, int element);
 int pop(int *ptr);
+int peek(int *ptr, int index);
+int stackTop(int *ptr);
+int stackBottom(int *ptr);
 
 int main()
 {
@@ -14,7 +17,6 @@ int main()
     printf("Enter the size of the Stack: ");
     scanf("%d", &size);
     int *stack = (int *)malloc(size * sizeof(int));
-
     while (1)
     {
         int check, element, val;
@@ -81,4 +83,34 @@ int pop(int *ptr)
         Top--;
         return val;
     }
+}
+
+int peek(int *ptr, int index)
+// peek() returs the element at the given position
+{
+    int arrIndex = Top - index + 1;
+    if (arrIndex < 0)
+    {
+        printf("Given index isn't a valid index\n");
+        return -1;
+    }
+    return ptr[arrIndex];
+}
+
+int stackTop(int *ptr)
+{
+    if (isEmpty(ptr))
+    {
+        return -1;
+    }
+    return ptr[Top];
+}
+
+int stackBottom(int *ptr)
+{
+    if (isEmpty(ptr))
+    {
+        return -1;
+    }
+    return ptr[0];
 }
