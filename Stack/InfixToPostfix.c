@@ -110,7 +110,7 @@ char *infixToPostfix(char *infix)
                 postfix[j] = pop();
                 j++;
             }
-            if (isEmpty())
+            if (!isEmpty())
             {
                 pop();
             }
