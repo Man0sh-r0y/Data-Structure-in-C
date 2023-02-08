@@ -1,6 +1,29 @@
 // Priority Queue implementation in C
 #include <stdio.h>
 int size = 0;
+
+void swap(int *a, int *b);
+void heapify(int array[], int size, int i);
+void insert(int array[], int newNum);
+void deleteRoot(int array[], int num);
+void printArray(int array[], int size);
+
+int main()
+{
+    int array[10];
+
+    insert(array, 3);
+    insert(array, 4);
+    insert(array, 9);
+    insert(array, 5);
+    insert(array, 2);
+    printf("Max-Heap array: ");
+    printArray(array, size);
+    deleteRoot(array, 4);
+    printf("After deleting an element: ");
+    printArray(array, size);
+}
+
 void swap(int *a, int *b)
 {
     int temp = *b;
@@ -83,21 +106,4 @@ void printArray(int array[], int size)
         printf("%d ", array[i]);
     }
     printf("\n");
-}
-
-// Driver code
-int main()
-{
-    int array[10];
-
-    insert(array, 3);
-    insert(array, 4);
-    insert(array, 9);
-    insert(array, 5);
-    insert(array, 2);
-    printf("Max-Heap array: ");
-    printArray(array, size);
-    deleteRoot(array, 4);
-    printf("After deleting an element: ");
-    printArray(array, size);
 }
