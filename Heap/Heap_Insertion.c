@@ -12,9 +12,9 @@ int main()
     // Array representation of Max-Heap
     //    10
     //    / \
-	//   5   3
+    //   5   3
     //  / \
-	// 2   4
+    // 2   4
     int arr[MAX] = {10, 5, 3, 2, 4};
     int n = 5;
     int key = 15;
