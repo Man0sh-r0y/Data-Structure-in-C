@@ -41,6 +41,31 @@ struct node *helper(struct node *root)
     lastRight->right = rightChild;
     return root->left;
 }
+// suppose we have to delete the 5 node
+//                 9
+//               /   \
+//              8    12
+//             /    /  \
+//            5    10   13
+//          /  \    \
+//         3     7   11
+//        / \   / \
+//       2   4 6   8
+//      /
+//     1
+// After deleteing the node it will looks like :
+// deleted the node whose value is 5
+//                     9
+//                   /   \
+//                  8    12
+//                 /    /  \
+//                3    10   13
+//               / \     \
+//              2   4     11
+//             /     \
+//            1       7
+//                   / \
+//                  6   8
 
 struct node *delete(struct node *root, int key)
 {
