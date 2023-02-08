@@ -10,9 +10,9 @@ int main()
     // Array representation of Max-Heap
     //    10
     //    / \
-	//   5   3
+    //   5   3
     //  / \
-	// 2   4
+    // 2   4
     int arr[] = {10, 5, 3, 2, 4};
     int n = sizeof(arr) / sizeof(arr[0]);
     deleteRoot(arr, n);
