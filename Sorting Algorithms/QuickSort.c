@@ -20,11 +20,13 @@ int partition(int A[], int low, int high)
     {
         while (A[i] <= pivot)
         {
+            // i will track the largest number than pivot
             i++;
         }
 
         while (A[j] > pivot)
         {
+            // j will track the smaller number then pivot
             j--;
         }
 
