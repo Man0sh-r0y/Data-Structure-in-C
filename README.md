@@ -15,7 +15,6 @@ This Data Structures and Algorithms using C course provides a comprehensive expl
  - Binary Search Tree
  - Heap
  - Hasing
- - Graph
 
 
 ## Authors
