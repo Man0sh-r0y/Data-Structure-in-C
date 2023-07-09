@@ -2,8 +2,8 @@
 
 int getMin(int a, int b);
 int getMax(int a, int b);
-int findMin(int A[], int n);
-int findMax(int A[], int n);
+int findMin(int A[], int n); // minimum element finding
+int findMax(int A[], int n); // maximum element finding
 
 int main()
 {
